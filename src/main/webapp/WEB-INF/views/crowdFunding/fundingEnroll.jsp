@@ -98,12 +98,9 @@
                             Calendar cal = Calendar.getInstance();
                             String res = new SimpleDateFormat("yyyy-MM-dd").format(System.currentTimeMillis());
                         %>
-                        <%--<%--%>
-                            <%--cal.setTime(new Date());--%>
-                            <%--cal.add(Calendar.DAY_OF_MONTH, 60);--%>
-                        <%--%>--%>
+
                         <h6>프로젝트 마감일</h6>
-                        <input type="date" id="endDate" name="endDate" min="<%=res%>" max="2012-12-29"  class="form-control">
+                        <input type="date" id="endDate" name="endDate" min="<%=res%>" max="2025-12-31"  class="form-control">
                         <br>
 
                         <h6>썸네일 이미지</h6>
@@ -113,6 +110,10 @@
                         <h6>후원 리워드</h6>
                         <input type="button" class="razo razo-btn" onclick="rewardPopup();" value="추가하기">
                         <br>
+
+                        <div style="margin-top: 85px;">
+                            <input type="submit" class="razo razo-btn btn-2" id="writebtn" name="writebtn" value="저장하기" style="border: 1px solid #dc2878;">
+                        </div>
 
                         <input type="hidden" name="fno" id="fno" value="0">
                         <input type="hidden" name="fbacker" id="fbacker" value="0">
@@ -126,18 +127,26 @@
         <div class="container" style="margin-top: 30px">
             <div class="row razo-blog-masonary">
                 <!-- <div class="row razo-blog-masonary-item"> -->
-                <div class="col-12">
+                <div style="width: 750px; height: auto;">
                     <h6>창작자 소개</h6>
                     <textarea name="fcreatorInfo" rows="3" cols="100" placeholder="창작자 여러분을 소개해주세요"></textarea>
                     <br><br>
                     <h6>프로젝트 스토리</h6>
                     <textarea name="fcontent" id="fcontent" rows="10" cols="100"></textarea>
                     <%--placeholder="여러분의 멋진 프로젝트 스토리를 들려주세요"--%>
-                    <div class="col-8" style="margin-top: 30px; text-align: center">
-                        <input type="submit" class="razo razo-btn" id="writebtn" name="writebtn" value="저장">
-                    </div>
                 </div>
                 <!-- </div> -->
+                <div style="width: 350px; height: 486px; padding: 15px;">
+                    <table class="table">
+                        <thead>
+                            <tr><th>리워드 목록</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>reward1</td></tr>
+                            <tr><td>reward1</td></tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </form>
