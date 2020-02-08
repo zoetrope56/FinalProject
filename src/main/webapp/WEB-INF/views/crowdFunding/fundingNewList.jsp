@@ -77,6 +77,32 @@
 </section>
 <!-- Event Welcome Area End -->
 
+<!-- Event Search Area Start -->
+<div class="event-search-area" style="padding: 60px;">
+    <div class="container">
+        <div class="event-search-content" style="margin: 0px 100px;">
+            <form action="#" class="search-form">
+                <div class="row align-items-end">
+                    <div class="col form-group">
+                        <select name="" id="" class="form-control">
+                            <option value="제목">제목</option>
+                            <option value="내용">내용</option>
+                            <option value="제목+내용">제목+내용</option>
+                        </select>
+                    </div>
+                    <div class="col-6 form-group">
+                        <input type="search" class="form-control" id="search" placeholder="검색할 단어를 입력해주세요">
+                    </div>
+                    <div class="col form-group text-right">
+                        <button type="submit" class="btn razo-btn w-100">프로젝트 검색</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Event Search Area End -->
+
 <!-- Razo Event Area Start -->
 <section class="razo-events-area section-padding-0-80">
     <div class="container">
@@ -87,7 +113,7 @@
                 <c:forEach var="fd" items="${newList.pageContent}">
                     <div class="single-razo-event-area d-flex flex-wrap align-items-center mb-50 wow fadeInUp" data-wow-delay="100ms">
                         <!-- Thumbnail -->
-                        <div class="event-thumbnail" style="width: 333px; height: 260px; overflow: hidden; text-align: center; display: flex">
+                        <div class="event-thumbnail" style="width: auto; height: 260px; overflow: hidden; text-align: center; display: flex">
                             <img src="/TunaMusic/resources/editor/photoUpload/${fd.fileName}" alt="" style="width: 333px; height: auto;">
                             <img src="" alt="">
                         </div>

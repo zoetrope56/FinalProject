@@ -26,15 +26,15 @@
 </head>
 <body>
 <!-- Preloader -->
-<div id="preloader">
-    <div>
-        <div class="spinner">
-            <div class="double-bounce1"></div>
-            <div class="double-bounce2"></div>
-        </div>
-        <span>Wait, please...</span>
-    </div>
-</div>
+<%--<div id="preloader">--%>
+    <%--<div>--%>
+        <%--<div class="spinner">--%>
+            <%--<div class="double-bounce1"></div>--%>
+            <%--<div class="double-bounce2"></div>--%>
+        <%--</div>--%>
+        <%--<span>Wait, please...</span>--%>
+    <%--</div>--%>
+<%--</div>--%>
 <!-- /Preloader -->
 <!-- Top Login Area Start -->
 <%@ include file="/WEB-INF/views/common/iconmodal.jsp"%>
