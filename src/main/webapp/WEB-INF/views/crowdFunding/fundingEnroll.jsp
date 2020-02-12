@@ -9,6 +9,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="java.util.Calendar"%>
 <%@ page import="java.text.SimpleDateFormat" %>
+<%@ page import="java.util.Date" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -93,14 +94,18 @@
                         <input type="number" id="fgoal" name="fgoal" class="form-control" min="0">
                         <br>
 
-                        <%!
+                        <%
                             SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
                             Calendar cal = Calendar.getInstance();
-                            String res = new SimpleDateFormat("yyyy-MM-dd").format(System.currentTimeMillis());
+                            cal.setTime(new Date());
+                            String min = formatter.format(cal.getTime());
+
+                            cal.add(Calendar.YEAR, 5);
+                            String max = formatter.format(cal.getTime());
                         %>
 
                         <h6>프로젝트 마감일</h6>
-                        <input type="date" id="endDate" name="endDate" min="<%=res%>" max="2025-12-31"  class="form-control">
+                        <input type="date" id="endDate" name="endDate" min="<%=min%>" max="<%=max%>"  class="form-control">
                         <br>
 
                         <h6>썸네일 이미지</h6>

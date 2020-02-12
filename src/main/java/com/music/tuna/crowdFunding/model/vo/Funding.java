@@ -1,7 +1,8 @@
 package com.music.tuna.crowdFunding.model.vo;
 
 import org.springframework.web.multipart.MultipartFile;
-import java.sql.Date;
+import java.util.Date;
+import java.util.Calendar;
 
 public class Funding {
 
@@ -167,6 +168,7 @@ public class Funding {
 
     public int getdDay() {
         //SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+
         if(getEndDate()!=null && getRegDate()!=null) {
             long diffDay = (getEndDate().getTime() - getRegDate().getTime()) / (24 * 60 * 60 * 1000);
             return (int) diffDay;
