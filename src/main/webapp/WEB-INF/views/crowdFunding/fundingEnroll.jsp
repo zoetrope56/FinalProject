@@ -114,7 +114,6 @@
 
                         <h6>후원 리워드</h6>
                         <input type="button" class="razo razo-btn" onclick="rewardPopup();" value="추가하기">
-                        <br>
 
                         <div style="margin-top: 85px;">
                             <input type="submit" class="razo razo-btn btn-2" id="writebtn" name="writebtn" value="저장하기" style="border: 1px solid #dc2878;">

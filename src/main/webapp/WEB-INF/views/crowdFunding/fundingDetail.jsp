@@ -84,6 +84,12 @@
                     <div class="event-purchase-button">
                         <a href="#" class="btn razo-btn" onclick="paymentPopup();"><i class="icon_cart"></i> 프로젝트 밀어주기</a>
                     </div>
+
+                    <c:if test="${funding.id == loginId}">
+                        <div style="margin-top: 85px;">
+                            <a href="/TunaMusic/crowdFunding/modifyFunding.do?fno=${funding.fno}"><input type="submit" class="razo razo-btn btn-2" id="modifybtn" name="modifybtn" value="수정하기" style="border: 1px solid #dc2878;"></a>
+                        </div>
+                    </c:if>
                 </div>
             </div>
         </div>
@@ -100,11 +106,11 @@
             <div class="col-4">
                 <h6>창작자 소개</h6>
                 <p>${funding.fcreatorInfo}</p>
-                <c:if test="${funding.id == loginId}">
-                    <div class="col-8" style="margin-top: 30px;">
-                        <a href="/TunaMusic/crowdFunding/modifyFunding.do?fno=${funding.fno}"><input type="submit" class="razo razo-btn" id="modifybtn" name="modifybtn" value="수정"></a>
-                    </div>
-                </c:if>
+                <%--<c:if test="${funding.id == loginId}">--%>
+                    <%--<div class="col-8" style="margin-top: 30px;">--%>
+                        <%--<a href="/TunaMusic/crowdFunding/modifyFunding.do?fno=${funding.fno}"><input type="submit" class="razo razo-btn" id="modifybtn" name="modifybtn" value="수정"></a>--%>
+                    <%--</div>--%>
+                <%--</c:if>--%>
             </div>
             <%--<c:if test="">--%>
                 <%----%>

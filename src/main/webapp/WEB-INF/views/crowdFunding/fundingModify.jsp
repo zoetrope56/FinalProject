@@ -96,8 +96,18 @@
                         <br>
 
                         <h6>후원 리워드</h6>
-                        <label id="freward">${funding.freward}</label>
-                        <br>
+                        <table class="table" style="margin-bottom: 11rem">
+                            <%--<thead>--%>
+                            <%--<tr><th>목록</th></tr>--%>
+                            <%--</thead>--%>
+                            <tbody>
+                            <tr><td><span id="freward">${funding.freward}</span></td></tr>
+                            </tbody>
+                        </table>
+
+                        <div style="margin-top: 85px;">
+                            <input type="submit" class="razo razo-btn btn-2" id="writebtn" name="writebtn" value="저장하기" style="border: 1px solid #dc2878;">
+                        </div>
 
                         <input type="hidden" name="fno" id="fno" value="${funding.fno}">
                         <input type="hidden" name="id" id="id" value="${funding.id}">
@@ -120,7 +130,7 @@
                     <input type="hidden" id="content" name="content" value="${funding.fcontent}">
                     <textarea name="fcontent" id="fcontent" rows="10" cols="100"></textarea>
                     <%--placeholder="여러분의 멋진 프로젝트 스토리를 들려주세요"--%>
-                    <input type="submit" class="razo razo-btn" id="writebtn" name="writebtn" value="저장">
+                    <%--<input type="submit" class="razo razo-btn" id="writebtn" name="writebtn" value="저장">--%>
                 </div>
                 <!-- </div> -->
             </div>
