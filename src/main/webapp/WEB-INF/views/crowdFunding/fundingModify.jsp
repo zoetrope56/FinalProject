@@ -95,15 +95,12 @@
                         <input type="date" id="endDate" name="endDate" class="form-control" value="${funding.endDate}">
                         <br>
 
+                        <h6>썸네일 이미지</h6>
+                        <input type="file" id="fuploadFile" name="fuploadFile">
+                        <br><br>
+
                         <h6>후원 리워드</h6>
-                        <table class="table" style="margin-bottom: 11rem">
-                            <%--<thead>--%>
-                            <%--<tr><th>목록</th></tr>--%>
-                            <%--</thead>--%>
-                            <tbody>
-                            <tr><td><span id="freward">${funding.freward}</span></td></tr>
-                            </tbody>
-                        </table>
+                        <input type="button" class="razo razo-btn" onclick="rewardPopup();" value="추가하기">
 
                         <div style="margin-top: 85px;">
                             <input type="submit" class="razo razo-btn btn-2" id="writebtn" name="writebtn" value="저장하기" style="border: 1px solid #dc2878;">
@@ -122,7 +119,7 @@
         <div class="container" style="margin-top: 30px">
             <div class="row razo-blog-masonary">
                 <!-- <div class="row razo-blog-masonary-item"> -->
-                <div class="col-12">
+                <div style="width: 750px; height: auto;">
                     <h6>창작자 소개</h6>
                     <textarea name="fcreatorInfo" rows="3" cols="100" placeholder="${funding.fcreatorInfo}"></textarea>
                     <br><br>
@@ -133,6 +130,16 @@
                     <%--<input type="submit" class="razo razo-btn" id="writebtn" name="writebtn" value="저장">--%>
                 </div>
                 <!-- </div> -->
+                <div style="width: 350px; height: 486px; padding: 15px;">
+                    <table class="table">
+                        <thead>
+                        <tr><th>리워드 목록</th></tr>
+                        </thead>
+                        <tbody>
+                        <tr><td><span id="freward">${funding.freward}</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </form>
